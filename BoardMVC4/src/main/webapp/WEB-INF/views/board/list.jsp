@@ -17,10 +17,10 @@
 <body>
 	<div>
 		${loginUser.nm }님 환영합니다.
-		<a href ="/user/profile"><button>프로필</button></a> 
-		<a href="/user/logout"><button>로그아웃</button></a>
+		<a href ="/boardmvc/user/profile"><button>프로필</button></a> 
+		<a href="/boardmvc/user/logout"><button>로그아웃</button></a>
 	</div>
-	<a href="/board/write">글등록</a>
+	<a href="/boardmvc/board/write">글등록</a>
 	<div>
 		검색: <input type="search" id="searchText">
 		<button onclick="search(searchText)">검색</button>
@@ -50,7 +50,7 @@
 		}
 	
 		function moveToDetail(i_board) {
-			location.href = '/board/detail?i_board=' + i_board
+			location.href = '/boardmvc/board/detail?i_board=' + i_board
 		}
 		
 		function addRows(res) {
@@ -71,7 +71,7 @@
 				tr.appendChild(td3)
 				
 				tr.addEventListener('click', function() {
-					location.href='/board/detail?i_board=' + item.i_board
+					location.href='/boardmvc/board/detail?i_board=' + item.i_board
 				})
 				tr.classList.add("hoverSelected");
 			
@@ -81,7 +81,7 @@
 		}
 				
 		function getBoardData(page, searchText) {		
-			axios.get('/board/getListData', {
+			axios.get('/boardmvc/board/getListData', {
 				params: {
 					page, 
 					searchText

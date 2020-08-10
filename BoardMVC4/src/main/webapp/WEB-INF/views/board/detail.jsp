@@ -10,10 +10,10 @@
 </head>
 <body>
 	<div>
-		<a href="/board/del?i_board=${data.i_board }">삭제</a>
-		<a href="/board/upd?i_board=${data.i_board }">수정</a>
+		<a href="/boardmvc/board/del?i_board=${data.i_board }">삭제</a>
+		<a href="/boardmvc/board/upd?i_board=${data.i_board }">수정</a>
 	</div>
-	<a href="/board/write">글 등록</a>
+	<a href="/boardmvc/board/write">글 등록</a>
 	<table>
 		<tr>
 			<th>번호</th>
