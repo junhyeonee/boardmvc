@@ -221,9 +221,9 @@ public class UserService {
 		profileImg = dbResult.getProfileimg();
 		
 		if(profileImg == null || profileImg.equals("")) {
-			profileImg = "/boardmvc/resources/img/base_profile.jpg";
+			profileImg = "/resources/img/base_profile.jpg";
 		} else {
-			profileImg = "/boardmvc/resources/img/user/" + loginUser.getI_user() + "/" + profileImg;
+			profileImg = "/resources/img/user/" + loginUser.getI_user() + "/" + profileImg;
 		}
 		
 		return profileImg;

@@ -10,8 +10,8 @@
 <body>
 	<div>
 	<div>${msg }</div>
-	<div><a href = "/boardmvc/user/login">로그인</a></div>
-	<form action="/boardmvc/user/joinPost" method="post">
+	<div><a href = "/user/login">로그인</a></div>
+	<form action="/user/joinPost" method="post">
 		<div>아이디: <input type="text" name="uid" ></div>
 		<div>비밀번호: <input type="text" name="upw"></div>
 		<div>비밀번호 확인: <input type="text" name="upwConfirm"></div>
@@ -35,7 +35,7 @@
 			}
 			console.log('ph : ' +ph.value)
 			//axios.get('/user/phAuth?ph='+ph.value)
-			axios.get('/boardmvc/user/phAuth',{
+			axios.get('/user/phAuth',{
 				params:{
 					ph: ph.value
 				}
